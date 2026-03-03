@@ -14,7 +14,7 @@
 .news-card.featured {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  //grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
