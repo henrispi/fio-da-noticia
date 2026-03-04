@@ -14,7 +14,7 @@
 .news-card.featured {
   grid-column: 1 / -1;
   display: grid;
-  //grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
@@ -83,4 +83,11 @@
   .news-content h3 {
     font-size: 1.1rem;
   }
+}
+
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
 }
