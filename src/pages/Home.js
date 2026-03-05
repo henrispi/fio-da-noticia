@@ -28,7 +28,7 @@ const Home = () => {
       // Não mostra erro no console, apenas define loading como false
       setLoading(false);
       // Opcional: mostrar uma mensagem amigável para o usuário
-      setError('Servidor indisponível. Tente novamente mais tarde.');
+      setError('Servidor indisponível.');
     });
 }, []);
 

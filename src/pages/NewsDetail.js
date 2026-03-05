@@ -81,7 +81,7 @@ const NewsDetail = () => {
               </div>
             </div>
 
-            <div className="news-image">
+            <div className="news-image-link">
               <img src={news.image} alt={news.title} />
             </div>
 

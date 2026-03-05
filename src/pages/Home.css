@@ -10,13 +10,26 @@
   background-color: #ecf0f1;
 }
 
-.featured-section,
-.recent-section {
-  margin-bottom: 5rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* LAYOUT PARA DESKTOP - 2 COLUNAS */
+.home-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);  /* Destaques | Últimas */
+  gap: 2rem;
+  align-items: start;
+}
+
+.featured-section {
+  margin-bottom: 0;  /* Remove margem, pois o gap controla */
 }
 
 .recent-section {
-  margin-top: 4rem; /* aumenta distância vertical */
+  margin-top: 0;  /* Remove margem, pois o gap controla */
 }
 
 .featured-section h2,
@@ -25,23 +38,47 @@
   margin-bottom: 1.5rem;
   font-size: 2rem;
   border-left: 4px solid #3498db;
-  padding-left: rem;
+  padding-left: 1rem;  /* ← Corrigi de 'rem' para '1rem' */
+}
+
+.recent-section h2 {
+  border-left-color: #e74c3c;
 }
 
 .featured-grid {
   display: grid;
+  grid-template-columns: 1fr;  /* Uma coluna para os cards de destaque */
   gap: 2rem;
 }
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;  /* Uma coluna para os cards de últimas notícias */
   gap: 2rem;
 }
 
-@media (max-width: 768px) {
+/* LAYOUT PARA MOBILE - 1 COLUNA */
+@media (max-width: 900px) {
+  .home-layout {
+    grid-template-columns: 1fr;  /* Uma coluna apenas */
+    gap: 3rem;  /* Espaço entre as seções */
+  }
+  
   .main-content {
     padding: 1rem 0;
+  }
+  
+  .featured-section h2,
+  .recent-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* CELULARES PEQUENOS - ajustes finos */
+@media (max-width: 480px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .news-grid {
@@ -51,33 +88,7 @@
   
   .featured-section h2,
   .recent-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
-}
-
-/*
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 2rem;
-
-  align-items: start;
-}
-*/
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.home-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: start;
 }

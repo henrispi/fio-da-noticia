@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container">
         <div className="logo">
           <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
-            <h1>Portal de Notícias</h1>
+            <h1>Fio da notícia</h1>
           </Link>
         </div>
         <nav className="nav">
